@@ -1,0 +1,58 @@
+body{
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;/*0 spaces for top and bottom, and auto adjustment for left and right of text on normal display.*/
+    padding: 0 16px;/*when the width of the window is decreased then there would be 16px gap between text and left window*/
+    /*flex box style which will stick the footer to the bottom of the page.*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;/*browser's height; vh=viewport height; 100vh means 100% of view port height(entire screen of window)*/
+}
+.main-content {
+    flex-grow: 1; /*main content should take all left over space.*/
+}
+footer{
+/*background: blue;
+padding: 16px; add spaces between edges of the blue box and the content inside.
+margin: 16px; it will add spaces to the outside of the blue box*/
+border-top: 1px solid #eeeeee;
+margin-top: 16px;/*distance between navigation and top border*/
+padding: 16px 0;/*distance between lower edge of top border and the first line afer it.*/
+color: #888888;
+}
+
+header{
+    margin-top:16px;
+    margin-bottom:48px;
+}
+
+h1{
+   font-size: 64px;
+   margin-bottom: 16px; 
+}
+header a{/*targeting links inside header*/
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+
+}
+/*img{ the code in this will modify the images of all the pages invoking this file*/
+.portrait{  /*here we can use class selector to target specific type of images, i.e. the changes which we will be applying will be applicable only for that image.*/
+    /*class attribute needs to be added in about page.*/
+    width: 250px;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+
+}
