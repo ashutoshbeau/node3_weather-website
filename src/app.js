@@ -7,6 +7,7 @@ forecast = require('./utils/forecast')
 //both of these values are provided by wrapper function.
 const app = express()
 console.log(__dirname) //console.log(__filename)
+const port = process.env.PORT || 3000
 
 //Define path for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')//__dirname gives the path to the folder in which this current file exists
@@ -29,7 +30,7 @@ app.get('', (req, res) => {//for index.hbs file
 app.get('/about', (req, res) => {//for index.hbs file
     res.render('about',{
         title: 'About my teacher',
-        name:'Andrew'
+        name:'Ashutosh with help of Andrew'
     })
 })
 app.get('/help', (req, res) =>{
@@ -132,6 +133,6 @@ const previousCode1= ()=>{
 //2. app.com'/help'
 //3. app.com'/about'
 
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000.')
+app.listen(port, ()=>{
+    console.log('Server is up on port '+ port)
 })
